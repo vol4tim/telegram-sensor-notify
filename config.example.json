@@ -1,0 +1,8 @@
+{
+  "bot": {
+    "token": ""
+  },
+  "sleep_hour": "2",
+  "roseman_l": "http://localhost:3000",
+  "roseman": "https://roseman.airalab.org"
+}
