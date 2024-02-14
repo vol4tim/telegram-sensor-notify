@@ -1,3 +1,4 @@
+import { Markup } from "telegraf";
 import bot from "../bot";
 import Profile from "../models/profile";
 
@@ -29,5 +30,13 @@ export function start() {
         lastName: ctx.from.last_name
       });
     }
+    return ctx.reply(
+      "Welcome!",
+      Markup.inlineKeyboard([Markup.button.callback("Subscribe", `subscribe`)])
+    );
+  });
+
+  bot.action("subscribe", async (ctx) => {
+    await ctx.scene.enter("subscribe");
   });
 }
